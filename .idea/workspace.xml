@@ -4,7 +4,55 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c04d809-485e-4af9-b213-f3fbd1e03095" name="Changes" comment="" />
+    <list default="true" id="7c04d809-485e-4af9-b213-f3fbd1e03095" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/jwt/jwt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/tag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/form.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/request.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/response.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/e/cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/e/code.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/e/msg.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/export/excel.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/file/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/gredis/redis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/logging/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/logging/log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/upload/image.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/jwt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/md5.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/pagination.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/api/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/api/upload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/api/v1/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/api/v1/tag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20220920.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20220922.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20220923.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20220924.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20220925.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20221017.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20221022.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/upload/images/9b41a38663113c675f719b34c9572f48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/article_service/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/cache_service/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/cache_service/tag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/tag_service/tag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/comments.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/follows.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/likes.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/users.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/videos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +61,9 @@
   <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.18" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2LSLtLVFsr15zFcYLJeELsEvZ7w" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -32,8 +83,19 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "/Users/zhangxin/code/go-application/tiktok"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sql" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />

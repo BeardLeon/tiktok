@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="tiktok@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
+    <root id="1">
+      <DefaultCasing>mixed/mixed</DefaultCasing>
+      <ServerVersion>8.0.31</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="astaxie"/>
+    <schema id="3" parent="1" name="blog"/>
+    <schema id="4" parent="1" name="emms"/>
+    <schema id="5" parent="1" name="grade_system"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="navi"/>
+    <schema id="9" parent="1" name="ojsystem"/>
+    <schema id="10" parent="1" name="park"/>
+    <schema id="11" parent="1" name="parkserver"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="private-navigation"/>
+    <schema id="14" parent="1" name="products"/>
+    <schema id="15" parent="1" name="shiori"/>
+    <schema id="16" parent="1" name="sys"/>
+    <schema id="17" parent="1" name="tiktok">
+      <Current>1</Current>
+    </schema>
+  </database-model>
+</dataSource>
