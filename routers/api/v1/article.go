@@ -1,18 +1,20 @@
 package v1
 
 import (
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
-	"github.com/EDDYCJY/go-gin-example/service/article_service"
-	"github.com/EDDYCJY/go-gin-example/service/tag_service"
+	"github.com/BeardLeon/tiktok/pkg/app"
+	"github.com/BeardLeon/tiktok/pkg/e"
+	"github.com/BeardLeon/tiktok/pkg/setting"
+	"github.com/BeardLeon/tiktok/pkg/util"
+	"github.com/BeardLeon/tiktok/service/article_service"
+	"github.com/BeardLeon/tiktok/service/tag_service"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 	"github.com/unknwon/com"
 	"net/http"
 )
 
+// GetArticle
+//
 // @Summary Get a single article
 // @Produce  json
 // @Param id path int true "ID"
@@ -50,32 +52,32 @@ func GetArticle(c *gin.Context) {
 
 	appG.Response(http.StatusOK, e.SUCCESS, article)
 
-	//id := com.StrTo(c.Param("id")).MustInt()
+	// id := com.StrTo(c.Param("id")).MustInt()
 	//
-	//valid := validation.Validation{}
-	//valid.Min(id, 1, "id").Message("ID必须大于0")
+	// valid := validation.Validation{}
+	// valid.Min(id, 1, "id").Message("ID必须大于0")
 	//
-	//code := e.INVALID_PARAMS
-	//var data interface{}
-	//if !valid.HasErrors() {
+	// code := e.INVALID_PARAMS
+	// var data interface{}
+	// if !valid.HasErrors() {
 	//	if models.ExistArticleByID(id) {
 	//		data = models.GetArticle(id)
 	//		code = e.SUCCESS
 	//	} else {
 	//		code = e.ERROR_NOT_EXIST_ARTICLE
 	//	}
-	//} else {
+	// } else {
 	//	for _, err := range valid.Errors {
 	//		logging.Info(err.Key, err.Message)
 	//		//log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
 	//	}
-	//}
+	// }
 	//
-	//c.JSON(http.StatusOK, gin.H{
+	// c.JSON(http.StatusOK, gin.H{
 	//	"code": code,
 	//	"msg":  e.GetMsg(code),
 	//	"data": data,
-	//})
+	// })
 
 }
 

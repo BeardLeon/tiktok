@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
+	"github.com/BeardLeon/tiktok/pkg/e"
 )
 
 type Tag struct {

@@ -2,8 +2,8 @@ package logging
 
 import (
 	"fmt"
-	"github.com/EDDYCJY/go-gin-example/pkg/file"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
+	"github.com/BeardLeon/tiktok/pkg/file"
+	"github.com/BeardLeon/tiktok/pkg/setting"
 	"os"
 	"time"
 )
