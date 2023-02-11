@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="tiktok@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
-    <root id="1">
-      <DefaultCasing>mixed/mixed</DefaultCasing>
-      <ServerVersion>8.0.31</ServerVersion>
-    </root>
+    <root id="1"/>
     <schema id="2" parent="1" name="astaxie"/>
     <schema id="3" parent="1" name="blog"/>
     <schema id="4" parent="1" name="emms"/>

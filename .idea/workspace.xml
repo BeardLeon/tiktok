@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03f5458-8aae-4fb8-a188-e83000d96d5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/comment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/common.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/demo_data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/favorite.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/feed.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/message.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/publish.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/relation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/jwt/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/jwt/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/logging/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logging/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/logging/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logging/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/upload.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/upload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/article_service/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/article_service/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/cache_service/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/cache_service/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/cache_service/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/cache_service/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/tag_service/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/tag_service/tag.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,27 +25,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "E:/code/Go/project/tiktok/runtime/video",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ssh.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/code/Go/project/tiktok/runtime/video&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\code\Go\project\tiktok\runtime\video" />
