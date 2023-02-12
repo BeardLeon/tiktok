@@ -1,11 +1,11 @@
 package v1
 
 import (
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
-	"github.com/EDDYCJY/go-gin-example/service/tag_service"
+	"github.com/BeardLeon/tiktok/pkg/app"
+	"github.com/BeardLeon/tiktok/pkg/e"
+	"github.com/BeardLeon/tiktok/pkg/setting"
+	"github.com/BeardLeon/tiktok/pkg/util"
+	"github.com/BeardLeon/tiktok/service/tag_service"
 	"github.com/astaxie/beego/validation"
 
 	"github.com/gin-gonic/gin"
@@ -120,12 +120,12 @@ type EditTagForm struct {
 // @Failure 500 {object} app.Response
 // @Router /api/v1/tags/{id} [put]
 func EditTag(c *gin.Context) {
-	//// Param returns the value of the URL param.
-	//// It is a shortcut for c.Params.ByName(key)
-	////     router.GET("/user/:id", func(c *gin.Context) {
-	////         // a GET request to /user/john
-	////         id := c.Param("id") // id == "john"
-	////     })
+	// // Param returns the value of the URL param.
+	// // It is a shortcut for c.Params.ByName(key)
+	// //     router.GET("/user/:id", func(c *gin.Context) {
+	// //         // a GET request to /user/john
+	// //         id := c.Param("id") // id == "john"
+	// //     })
 	var (
 		appG = app.Gin{C: c}
 		form = EditTagForm{ID: com.StrTo(c.Param("id")).MustInt()}

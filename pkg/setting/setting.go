@@ -89,11 +89,11 @@ func Setup() {
 	if err != nil {
 		log.Fatalf("Cfg.MapTo RedisSettring err : %v", err)
 	}
-	//s
+	// s
 	RedisSetting.IdleTimeout = RedisSetting.IdleTimeout * time.Second
 }
 
-//var (
+// var (
 //	Cfg *ini.File
 //
 //	RunMode string
@@ -104,9 +104,9 @@ func Setup() {
 //
 //	PageSize  int
 //	JwtSecret string
-//)
+// )
 //
-//func init() {
+// func init() {
 //	var err error
 //	Cfg, err = ini.Load("conf/app.ini")
 //	if err != nil {
@@ -116,13 +116,13 @@ func Setup() {
 //	LoadBase()
 //	LoadServer()
 //	LoadApp()
-//}
+// }
 //
-//func LoadBase() {
+// func LoadBase() {
 //	RunMode = Cfg.Section("").Key("RUN_MODE").MustString("debug")
-//}
+// }
 //
-//func LoadServer() {
+// func LoadServer() {
 //	sec, err := Cfg.GetSection("server")
 //	if err != nil {
 //		log.Fatalf("Fail to get section 'server': %v", err)
@@ -131,9 +131,9 @@ func Setup() {
 //	HTTPPort = sec.Key("HTTP_PORT").MustInt(8000)
 //	ReadTimeout = time.Duration(sec.Key("READ_TIMEOUT").MustInt(60)) * time.Second
 //	WriteTimeout = time.Duration(sec.Key("WRITE_TIMEOUT").MustInt(60)) * time.Second
-//}
+// }
 //
-//func LoadApp() {
+// func LoadApp() {
 //	sec, err := Cfg.GetSection("app")
 //	if err != nil {
 //		log.Fatalf("Fail to get section 'app': %v", err)
@@ -141,4 +141,4 @@ func Setup() {
 //
 //	JwtSecret = sec.Key("JWT_SECRET").MustString("!@)*#)!@U#@*!@!)")
 //	PageSize = sec.Key("PAGE_SIZE").MustInt(10)
-//}
+// }
