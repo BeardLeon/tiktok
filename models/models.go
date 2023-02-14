@@ -49,9 +49,9 @@ func Setup() {
 		log.Println(err)
 	}
 
-	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
-		return setting.DatabaseSetting.TablePrefix + defaultTableName
-	}
+	// gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
+	// 	return setting.DatabaseSetting.TablePrefix + defaultTableName
+	// }
 
 	db.SingularTable(true)
 	db.DB().SetMaxIdleConns(10)
