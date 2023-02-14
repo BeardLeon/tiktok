@@ -23,6 +23,8 @@ type App struct {
 	LogSaveName string
 	LogFileExt  string
 	TimeFormat  string
+
+	VideoCount int
 }
 
 var AppSetting = &App{}

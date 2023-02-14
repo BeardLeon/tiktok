@@ -2,10 +2,9 @@ package routers
 
 import (
 	"github.com/BeardLeon/tiktok/controller"
+	_ "github.com/BeardLeon/tiktok/docs"
 	"github.com/BeardLeon/tiktok/pkg/setting"
 	"github.com/gin-gonic/gin"
-
-	_ "github.com/BeardLeon/tiktok/docs"
 )
 
 func InitRouter() *gin.Engine {

@@ -1,18 +1,21 @@
 package controller
 
-var DemoVideos = []Video{
+import "github.com/BeardLeon/tiktok/models"
+
+var DemoVideos = []models.Video{
 	{
-		Id:            1,
-		Author:        DemoUser,
-		PlayUrl:       "/static/video/bear.mp4",
-		CoverUrl:      "https://cdn.xiaolincoding.com/gh/xiaolincoder/mysql/%E7%B4%A2%E5%BC%95/%E5%8C%BA%E5%88%86%E5%BA%A6.png",
+		Id:      1,
+		Author:  DemoUser,
+		PlayUrl: "/static/video/bear.mp4",
+		// PlayUrl:       "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+		CoverUrl:      "/static/upload/images/9b41a38663113c675f719b34c9572f48.png",
 		FavoriteCount: 0,
 		CommentCount:  0,
 		IsFavorite:    false,
 	},
 }
 
-var DemoComments = []Comment{
+var DemoComments = []models.Comment{
 	{
 		Id:         1,
 		User:       DemoUser,
@@ -21,7 +24,7 @@ var DemoComments = []Comment{
 	},
 }
 
-var DemoUser = User{
+var DemoUser = models.User{
 	Id:            1,
 	Name:          "TestUser",
 	FollowCount:   0,
