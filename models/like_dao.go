@@ -2,31 +2,27 @@ package models
 
 import "github.com/jinzhu/gorm"
 
-type like struct {
+type Like struct {
 	gorm.Model
-	userId  int `gorm:"column:user_id"`
-	videoId int `gorm:"column:video_id"`
-	cancel  int `gorm:"column:cancel"`
+	UserId  int `gorm:"column:user_id"`
+	VideoId int `gorm:"column:video_id"`
+	Cancel  int `gorm:"column:cancel"`
 }
 
-func (l like) TableName() string {
-	return "likes"
-}
-
-func GetFavoriteCount(videoId int) (int64, error) {
+func GetFavoriteCount(videoId int64) (int64, error) {
 	var count int64
-	result := db.Model(&like{}).Where("video_id=?", videoId).Count(&count)
+	result := db.Model(&Like{}).Where("video_id=?", videoId).Count(&count)
 	if result.Error != nil {
 		return -1, result.Error
 	}
 	return count, nil
 }
 
-func IsFavorite(userId, videoId int) (bool, error) {
+func IsFavorite(userId, videoId int64) (bool, error) {
 	var count int64
-	result := db.Model(&like{}).Where("user_id=? and video_id=?", userId, videoId).Count(&count)
+	result := db.Model(&Like{}).Where("user_id=? and video_id=?", userId, videoId).Count(&count)
 	if result.Error != nil {
 		return false, result.Error
 	}
-	return count >= 1, nil
+	return count == 1, nil
 }

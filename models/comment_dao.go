@@ -2,21 +2,17 @@ package models
 
 import "github.com/jinzhu/gorm"
 
-type comment struct {
+type Comment struct {
 	gorm.Model
-	userId      int    `gorm:"column:user_id"`
-	videoId     int    `gorm:"column:video_id"`
-	commentText string `gorm:"column:comment_text"`
-	cancel      int    `gorm:"column:cancel"`
+	UserId      int    `gorm:"column:user_id"`
+	VideoId     int    `gorm:"column:video_id"`
+	CommentText string `gorm:"column:comment_text"`
+	Cancel      int    `gorm:"column:cancel"`
 }
 
-func (c comment) TableName() string {
-	return "comments"
-}
-
-func GetCommentCount(videoId int) (int64, error) {
+func GetCommentCount(videoId int64) (int64, error) {
 	var count int64
-	result := db.Model(&comment{}).Where("video_id=?", videoId).Find(count)
+	result := db.Model(&Comment{}).Where("video_id=?", videoId).Count(&count)
 	if result.Error != nil {
 		return -1, result.Error
 	}

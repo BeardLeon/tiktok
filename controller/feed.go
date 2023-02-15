@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"github.com/BeardLeon/tiktok/models"
 	"github.com/BeardLeon/tiktok/pkg/util"
 	"github.com/BeardLeon/tiktok/service"
 	"github.com/gin-gonic/gin"
@@ -11,9 +10,9 @@ import (
 )
 
 type FeedResponse struct {
-	models.Response
-	VideoList []models.Video `json:"video_list,omitempty"`
-	NextTime  int64          `json:"next_time,omitempty"`
+	Response
+	VideoList []Video `json:"video_list,omitempty"`
+	NextTime  int64   `json:"next_time,omitempty"`
 }
 
 // Feed same demo video list for every request
@@ -34,7 +33,7 @@ func Feed(c *gin.Context) {
 	}
 	token, ok := c.GetQuery("token")
 
-	var videos []models.Video
+	var videos []Video
 	var err error
 
 	if ok {
@@ -55,7 +54,7 @@ func Feed(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, FeedResponse{
-		Response:  models.Response{StatusCode: 0},
+		Response:  Response{StatusCode: 0},
 		VideoList: videos,
 		NextTime:  time.Now().Unix(),
 	})

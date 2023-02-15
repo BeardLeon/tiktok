@@ -3,7 +3,7 @@ package message_service
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/BeardLeon/tiktok/models"
+	"github.com/BeardLeon/tiktok/controller"
 	"io"
 	"net"
 	"sync"
@@ -43,7 +43,7 @@ func process(conn net.Conn) {
 			continue
 		}
 
-		var event = models.MessageSendEvent{}
+		var event = controller.MessageSendEvent{}
 		_ = json.Unmarshal(buf[:n], &event)
 		fmt.Printf("Receive Message：%+v\n", event)
 
@@ -60,7 +60,7 @@ func process(conn net.Conn) {
 			continue
 		}
 
-		pushEvent := models.MessagePushEvent{
+		pushEvent := controller.MessagePushEvent{
 			FromUserId: event.UserId,
 			MsgContent: event.MsgContent,
 		}
