@@ -14,7 +14,6 @@ require (
 )
 
 require (
-	github.com/EDDYCJY/go-gin-example v0.0.0-20201228125222-28f372bf41f9 // indirect
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
@@ -55,7 +54,6 @@ require (
 	github.com/sanity-io/litter v1.5.5 // indirect
 	github.com/sergi/go-diff v1.0.0 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
-	github.com/unknwon/com v1.0.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.34.0 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect

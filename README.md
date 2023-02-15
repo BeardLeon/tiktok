@@ -32,12 +32,16 @@ tiktok
 
 # 快速上手
 
-1. 创建 tiktok 数据库
+1. 创建 `tiktok` 数据库
 
     ```mysql
     CREATE DATABASE IF NOT EXISTS tiktok DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
     ```
 
-2. 执行 sql/tiktok.sql 文件
+2. 执行 `sql/tiktok.sql` 文件
 
-3. 修改 conf/app.ini 文件
+3. 修改 `conf/app.ini` 文件
+
+4. 修改 `go.mod` 与 `pkg/go.mod`，执行 `go mod tidy`
+
+5. 执行 `go build`，运行即可

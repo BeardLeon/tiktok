@@ -22,7 +22,7 @@ func (Video) TableName() string {
 // 根据传入的时间来获取此时间之前的 VideoCount 条视频
 func GetVideosByLastTime(lastTime time.Time) ([]Video, error) {
 	videos := make([]Video, 0, setting.AppSetting.VideoCount)
-	result := db.Model(&Video{}).Where("created_at<?", lastTime).Order("created_at desc").
+	result := db.Model(&Video{}).Where("created_at<?", lastTime.Unix()).Order("created_at desc").
 		Limit(setting.AppSetting.VideoCount).Find(&videos)
 	if result.Error != nil {
 		return nil, result.Error
