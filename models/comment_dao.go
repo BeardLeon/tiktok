@@ -10,6 +10,10 @@ type Comment struct {
 	Cancel      int    `gorm:"column:cancel"`
 }
 
+func (Comment) TableName() string {
+	return "comments"
+}
+
 func GetCommentCount(videoId int64) (int64, error) {
 	var count int64
 	result := db.Model(&Comment{}).Where("video_id=?", videoId).Count(&count)

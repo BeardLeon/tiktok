@@ -9,6 +9,10 @@ type Follow struct {
 	Cancel     int64 `gorm:"column:cancel"`
 }
 
+func (Follow) TableName() string {
+	return "follows"
+}
+
 func GetFollowCountById(id int64) (int64, error) {
 	var count int64
 	result := db.Model(&Follow{}).Where("follower_id=?", id).Count(&count)

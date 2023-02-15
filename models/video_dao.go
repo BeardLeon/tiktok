@@ -14,6 +14,10 @@ type Video struct {
 	Title    string `gorm:"column:title"`
 }
 
+func (Video) TableName() string {
+	return "videos"
+}
+
 // GetVideosByLastTime
 // 根据传入的时间来获取此时间之前的 VideoCount 条视频
 func GetVideosByLastTime(lastTime time.Time) ([]Video, error) {

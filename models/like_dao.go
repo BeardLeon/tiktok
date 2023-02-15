@@ -9,6 +9,10 @@ type Like struct {
 	Cancel  int `gorm:"column:cancel"`
 }
 
+func (Like) TableName() string {
+	return "likes"
+}
+
 func GetFavoriteCount(videoId int64) (int64, error) {
 	var count int64
 	result := db.Model(&Like{}).Where("video_id=?", videoId).Count(&count)

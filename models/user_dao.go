@@ -11,6 +11,10 @@ type User struct {
 	Password string `gorm:"column:password"`
 }
 
+func (User) TableName() string {
+	return "users"
+}
+
 func GetUserById(id int64) (User, error) {
 	var user User
 	result := db.Model(&User{}).Where("id=?", id).Find(&user)
