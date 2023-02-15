@@ -2,7 +2,7 @@ package models
 
 import (
 	"github.com/BeardLeon/tiktok/pkg/setting"
-	"github.com/jinzhu/gorm"
+	"gorm.io/gorm"
 	"time"
 )
 
