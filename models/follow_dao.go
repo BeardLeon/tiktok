@@ -33,7 +33,7 @@ func GetFollowerCountById(id int64) (int64, error) {
 
 func GetIsFollow(id, authorId int64) (bool, error) {
 	var count int64
-	result := db.Model(&Follow{}).Where("user_id=? and follower_id=", authorId, id).Count(&count)
+	result := db.Model(&Follow{}).Where("user_id=? and follower_id=?", authorId, id).Count(&count)
 	if result.Error != nil {
 		return false, result.Error
 	}
