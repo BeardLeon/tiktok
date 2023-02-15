@@ -10,9 +10,9 @@ import (
 )
 
 type FeedResponse struct {
-	Response
-	VideoList []Video `json:"video_list,omitempty"`
-	NextTime  int64   `json:"next_time,omitempty"`
+	service.Response
+	VideoList []service.Video `json:"video_list,omitempty"`
+	NextTime  int64           `json:"next_time,omitempty"`
 }
 
 // Feed same demo video list for every request
@@ -33,7 +33,7 @@ func Feed(c *gin.Context) {
 	}
 	token, ok := c.GetQuery("token")
 
-	var videos []Video
+	var videos []service.Video
 	var err error
 
 	if ok {
@@ -54,7 +54,7 @@ func Feed(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, FeedResponse{
-		Response:  Response{StatusCode: 0},
+		Response:  service.Response{StatusCode: 0},
 		VideoList: videos,
 		NextTime:  time.Now().Unix(),
 	})
