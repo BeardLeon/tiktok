@@ -5,19 +5,19 @@ import (
 	"github.com/BeardLeon/tiktok/models"
 	"github.com/BeardLeon/tiktok/pkg/logging"
 	"github.com/BeardLeon/tiktok/pkg/setting"
-	"github.com/BeardLeon/tiktok/routers"
-	"github.com/BeardLeon/tiktok/service/message_service"
+	"github.com/BeardLeon/tiktok/routers/api/v1"
+	"github.com/BeardLeon/tiktok/service"
 	"net/http"
 )
 
 func main() {
-	go message_service.RunMessageServer()
+	go service.RunMessageServer()
 
 	setting.Setup()
 	models.Setup()
 	logging.Setup()
 
-	router := routers.InitRouter()
+	router := v1.InitRouter()
 
 	s := &http.Server{
 		Addr:           fmt.Sprintf(":%d", setting.ServerSetting.HttpPort),

@@ -3,28 +3,23 @@ module github.com/BeardLeon/tiktok
 go 1.18
 
 require (
-	github.com/360EntSecGroup-Skylar/excelize v1.4.1
 	github.com/BeardLeon/tiktok/pkg v0.0.0-00010101000000-000000000000
 	github.com/RaymondCode/simple-demo v0.0.0-20230109111057-5031aee01508
-	github.com/astaxie/beego v1.12.3
 	github.com/gavv/httpexpect/v2 v2.8.0
 	github.com/gin-gonic/gin v1.8.2
-	github.com/jinzhu/gorm v0.0.0-20180213101209-6e1387b44c64
 	github.com/stretchr/testify v1.8.1
 	github.com/swaggo/swag v1.8.10
-	github.com/tealeg/xlsx v1.0.5
-	github.com/unknwon/com v1.0.1
+	gorm.io/driver/mysql v1.4.6
+	gorm.io/gorm v1.24.5
 )
 
 require (
-	github.com/EDDYCJY/go-gin-example v0.0.0-20201228125222-28f372bf41f9 // indirect
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/ajg/form v1.5.1 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/denisenkom/go-mssqldb v0.12.3 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -36,13 +31,12 @@ require (
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.1 // indirect
-	github.com/go-sql-driver/mysql v1.5.0 // indirect
+	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/goccy/go-json v0.9.11 // indirect
-	github.com/gomodule/redigo v2.0.1-0.20180401191855-9352ab68be13+incompatible // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/imkira/go-interpol v1.1.0 // indirect
-	github.com/jinzhu/inflection v0.0.0-20170102125226-1c35d901db3d // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -53,12 +47,12 @@ require (
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
+	github.com/onsi/ginkgo v1.12.0 // indirect
+	github.com/onsi/gomega v1.7.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sanity-io/litter v1.5.5 // indirect
 	github.com/sergi/go-diff v1.0.0 // indirect
-	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.34.0 // indirect
@@ -81,13 +75,5 @@ require (
 
 replace (
 	github.com/BeardLeon/tiktok/middleware/jwt => E:/code/Go/project/tiktok/middleware/jwt
-
 	github.com/BeardLeon/tiktok/pkg => E:/code/Go/project/tiktok/pkg
-
-//github.com/BeardLeon/tiktok/pkg/logging => ./pkg/logging
-//github.com/BeardLeon/tiktok/pkg/setting => ./pkg/setting
-//github.com/BeardLeon/tiktok/pkg/e => ./pkg/e
-//github.com/BeardLeon/tiktok/pkg/util => ./pkg/util
-//github.com/BeardLeon/tiktok/pkg/upload => ./pkg/upload
-//github.com/BeardLeon/tiktok/routers/api => ./routers/api
 )
