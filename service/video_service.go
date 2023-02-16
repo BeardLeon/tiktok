@@ -22,7 +22,11 @@ func GetVideosByLastTime(lastTime time.Time) ([]Video, error) {
 	results := make([]Video, len(videos))
 	copyVideos(videos, results)
 	for i, v := range videos {
-		results[i].Author, err = GetAuthorById(int64(v.ID), v.AuthorId)
+		author, _, err := GetAuthorById(-1, v.AuthorId)
+		if author == nil {
+			return nil, nil
+		}
+		results[i].Author = *author
 		if err != nil {
 			return nil, err
 		}
