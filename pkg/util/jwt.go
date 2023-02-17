@@ -25,7 +25,7 @@ func GenerateToken(username, password string) (string, error) {
 		password,
 		jwt.StandardClaims{
 			ExpiresAt: expireTime.Unix(),
-			Issuer:    "gin-blog",
+			Issuer:    "tiktok",
 		},
 	}
 	// method 对应着SigningMethodHMAC struct{}, 其中包含 SigningMethodHS256, SigningMethodHS384, SigningMethodHS512三种cryoto.Hash(加密哈希）方案

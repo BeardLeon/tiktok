@@ -26,7 +26,9 @@ func Feed(c *gin.Context) {
 	} else {
 		now, err := strconv.ParseInt(inputTime, 10, 64)
 		if err != nil {
-			c.JSON(http.StatusInternalServerError, nil)
+			c.JSON(http.StatusOK, FeedResponse{
+				Response: service.Response{StatusCode: 1, StatusMsg: "input time error"},
+			})
 			return
 		}
 		lastTime = time.Unix(now, 0)
