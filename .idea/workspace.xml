@@ -4,67 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03f5458-8aae-4fb8-a188-e83000d96d5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3daf3895-6c40-49be-9ad6-4263aa21623d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3daf3895-6c40-49be-9ad6-4263aa21623d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/article.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/auth.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/comment_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/comment_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/follow_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/follow_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/like_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/like_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tag.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/video_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/video_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/app/form.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/app/request.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/app/response.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/e/cache.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/e/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/e/msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/msg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/export/excel.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/gredis/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gredis/redis.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/upload/image.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/upload/image.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/md5.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/pagination.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/auth.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/upload.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/article.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/tag.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220920.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220922.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220923.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220924.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220925.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20221017.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20221022.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230210.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230211.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/video/bear.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/upload/video/bear.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/article_service/article.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/cache_service/article.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/cache_service/tag.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/message_service/message.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/message.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/tag_service/tag.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/comments.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/database.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/follows.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/likes.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/videos.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiktok.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tiktok.exe" afterDir="false" />
-    </list>
+    <list default="true" id="c03f5458-8aae-4fb8-a188-e83000d96d5d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +17,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://D:/environment/Go" />
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -89,34 +29,34 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2LZbex0vN63xC2XF2fS5TJV6Z8i" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "E:/code/Go/project/leaf",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\code\Go\project\tiktok\runtime\video" />
@@ -130,6 +70,59 @@
       <recent name="E:\code\Go\project\tiktok\controller" />
       <recent name="E:\code\Go\project\tiktok\models" />
     </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="tiktok.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/sql/tiktok.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="tiktok" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="tiktok" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestFeed in github.com/BeardLeon/tiktok/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tiktok" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/BeardLeon/tiktok/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestFeed\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="tiktok" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.TestFeed in github.com/BeardLeon/tiktok/test" />
+        <item itemvalue="Database Script.tiktok.sql" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +140,11 @@
     </option>
   </component>
   <component name="VgoProject">
-    <settings-migrated>true</settings-migrated>
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn, direct" />
+      </map>
+    </environment>
   </component>
 </project>

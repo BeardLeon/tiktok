@@ -22,6 +22,8 @@ type App struct {
 	LogFileExt  string
 	TimeFormat  string
 
+	PrefixUrl string
+
 	VideoCount int
 }
 

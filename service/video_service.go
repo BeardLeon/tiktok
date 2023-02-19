@@ -50,3 +50,13 @@ func GetVideosByLastTimeAndUsername(lastTime time.Time, username string) ([]Vide
 	// TODO: 根据用户推荐视频
 	return nil, nil
 }
+
+func GetVideosByAuthorId(authorId int64) ([]Video, error) {
+	videos, err := models.GetVideosByAuthorId(authorId)
+	if err != nil {
+		return nil, err
+	}
+	results := make([]Video, len(videos))
+	copyVideos(videos, results)
+	return results, nil
+}

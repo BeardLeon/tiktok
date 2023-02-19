@@ -140,16 +140,17 @@ func Login(c *gin.Context) {
 		return
 	}
 
-	// TODO: 内存 map 替换为 Redis
-	if user, exist := usersLoginInfo[token]; exist {
-		c.JSON(http.StatusOK, UserLoginResponse{
-			Response: service.Response{StatusCode: 0},
-			UserId:   user.Id,
-			Token:    token,
-		})
-		return
-	}
+	//// TODO: 内存 map 替换为 Redis
+	//if user, exist := usersLoginInfo[token]; exist {
+	//	c.JSON(http.StatusOK, UserLoginResponse{
+	//		Response: service.Response{StatusCode: 0},
+	//		UserId:   user.Id,
+	//		Token:    token,
+	//	})
+	//	return
+	//}
 
+	// 查询数据库是否存在
 	exist, id, err := service.IsExistByNameAndPassword(username, password)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, UserLoginResponse{

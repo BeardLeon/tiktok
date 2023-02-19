@@ -15,4 +15,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/BeardLeon/tiktok/pkg => E:/code/Go/project/tiktok/pkg
+replace github.com/BeardLeon/tiktok/pkg => D:\ourtiktok\pkg
