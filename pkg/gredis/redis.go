@@ -2,7 +2,7 @@ package gredis
 
 import (
 	"encoding/json"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
+	"github.com/BeardLeon/tiktok/pkg/setting"
 	"github.com/gomodule/redigo/redis"
 	"time"
 )
@@ -20,7 +20,7 @@ func Setup() error {
 				return nil, err
 			}
 			if setting.RedisSetting.Password != "" {
-				//c.DO: 向 Redis 服务器发送命令并返回收到的答复
+				// c.DO: 向 Redis 服务器发送命令并返回收到的答复
 				if _, err := c.Do("AUTH", setting.RedisSetting.Password); err != nil {
 					c.Close()
 					return nil, err
@@ -28,7 +28,7 @@ func Setup() error {
 			}
 			return c, err
 		},
-		//可选的应用程序检查健康功能
+		// 可选的应用程序检查健康功能
 		TestOnBorrow: func(c redis.Conn, t time.Time) error {
 			_, err := c.Do("PING")
 			return err
@@ -62,7 +62,7 @@ func Set(key string, data interface{}, time int) error {
 func Exists(key string) bool {
 	conn := RedisConn.Get()
 	defer conn.Close()
-	//将命令返回转为布尔值
+	// 将命令返回转为布尔值
 	exists, err := redis.Bool(conn.Do("EXISTS", key))
 	if err != nil {
 		return false
@@ -72,11 +72,11 @@ func Exists(key string) bool {
 }
 
 func Get(key string) ([]byte, error) {
-	//在连接池中获取一个活跃连接
+	// 在连接池中获取一个活跃连接
 	conn := RedisConn.Get()
 	defer conn.Close()
 
-	//将命令返回转为 Bytes
+	// 将命令返回转为 Bytes
 	reply, err := redis.Bytes(conn.Do("GET", key))
 	if err != nil {
 		return nil, err
@@ -96,7 +96,7 @@ func LikeDeletes(key string) error {
 	conn := RedisConn.Get()
 	defer conn.Close()
 
-	//将命令返回转为 []string
+	// 将命令返回转为 []string
 	keys, err := redis.Strings(conn.Do("KEYS", "*"+key+"*"))
 	if err != nil {
 		return err

@@ -38,10 +38,10 @@ func Setup() {
 		log.Fatalf("logging.Setup err : %v", err)
 	}
 
-	//创建一个新的日志记录器。
-	//F: 定义要写入日志数据的IO句柄
-	//Prefix：每个生成的日志行的开头
-	//Flag: 日志记录属性
+	// 创建一个新的日志记录器。
+	// F: 定义要写入日志数据的IO句柄
+	// Prefix：每个生成的日志行的开头
+	// Flag: 日志记录属性
 	logger = log.New(F, DefaultPrefix, log.LstdFlags)
 }
 
