@@ -4,9 +4,9 @@ import "gorm.io/gorm"
 
 type Like struct {
 	gorm.Model
-	UserId  int `gorm:"column:user_id"`
-	VideoId int `gorm:"column:video_id"`
-	Cancel  int `gorm:"column:cancel"`
+	UserId  int64 `gorm:"column:user_id"`
+	VideoId int64 `gorm:"column:video_id"`
+	Cancel  int64 `gorm:"column:cancel"`
 }
 
 func (Like) TableName() string {
@@ -29,4 +29,38 @@ func IsFavorite(userId, videoId int64) (bool, error) {
 		return false, result.Error
 	}
 	return count == 1, nil
+}
+
+func Favorite(userId, videoId int64) error {
+	var count int64
+	result := db.Model(&Like{}).Where("user_id=? and video_id=?", userId, videoId).Count(&count)
+	if result.Error != nil {
+		return result.Error
+	}
+	if count == 0 {
+		like := Like{
+			UserId:  userId,
+			VideoId: videoId,
+			Cancel:  0,
+		}
+		return db.Model(&Like{}).Create(&like).Error
+	}
+	return db.Model(&Like{}).Where("user_id=? and video_id=?", userId, videoId).Set("cancel", 0).Error
+}
+
+func CancelFavorite(userId, videoId int64) error {
+	return db.Model(&Like{}).Where("user_id=? and video_id=?", userId, videoId).Set("cancel", 1).Error
+}
+
+func GetFavoriteVideosByUserId(userId int64) ([]Video, error) {
+	var likes []Like
+	db.Model(&Like{}).Where("user_id=? and cancel=0", userId).Find(&likes)
+	videos := make([]Video, len(likes))
+	for i, like := range likes {
+		result := db.Model(&Video{}).Where("id=?", like.VideoId).First(&videos[i])
+		if result.Error != nil {
+			return nil, result.Error
+		}
+	}
+	return videos, nil
 }

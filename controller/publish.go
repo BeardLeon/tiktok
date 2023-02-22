@@ -18,10 +18,10 @@ type VideoListResponse struct {
 func Publish(c *gin.Context) {
 	token := c.PostForm("token")
 	// TODO: token鉴权还是没做
-	//if _, exist := usersLoginInfo[token]; !exist {
+	// if _, exist := usersLoginInfo[token]; !exist {
 	//	c.JSON(http.StatusOK, service.Response{StatusCode: 1, StatusMsg: "User doesn't exist"})
 	//	return
-	//}
+	// }
 
 	data, err := c.FormFile("data")
 	if err != nil {
@@ -36,7 +36,7 @@ func Publish(c *gin.Context) {
 	user := usersLoginInfo[token]
 	finalName := fmt.Sprintf("%d_%s", user.Id, filename)
 	saveFile := filepath.Join("./public", finalName)
-	if err := c.SaveUploadedFile(data, saveFile); err != nil {
+	if err = c.SaveUploadedFile(data, saveFile); err != nil {
 		c.JSON(http.StatusOK, service.Response{
 			StatusCode: 1,
 			StatusMsg:  err.Error(),

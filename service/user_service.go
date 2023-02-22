@@ -36,10 +36,12 @@ func GetAuthorById(userId, authorId int64) (*User, string, error) {
 	return &result, user.Password, nil
 }
 
+// IsExistByName 查询用户名为 name 的账号是否存在
 func IsExistByName(name string) (bool, error) {
 	return models.IsExistByName(name)
 }
 
+// CreateUser 创建用户名为 name，密码为 password 的账号
 func CreateUser(name, password string) (*User, error) {
 	user, err := models.CreateUser(name, password)
 	if err != nil {
@@ -64,6 +66,7 @@ func CreateUser(name, password string) (*User, error) {
 	return &result, nil
 }
 
-func IsExistByNameAndPassword(name, password string) (bool, int64, error) {
-	return models.IsExistByNameAndPassword(name, password)
+// GetUserByNameAndPassword 查询用户名为 name，密码为 password 的用户
+func GetUserByNameAndPassword(name, password string) (*models.User, error) {
+	return models.GetUserByNameAndPassword(name, password)
 }

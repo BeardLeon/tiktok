@@ -30,9 +30,6 @@ func GetVideosByLastTime(lastTime time.Time) ([]Video, error) {
 	return videos, nil
 }
 
-/**
-@Author 秋阳
-*/
 func GetVideosByAuthorId(authorId int64) ([]Video, error) {
 	// videos 集合
 	var videos []Video
