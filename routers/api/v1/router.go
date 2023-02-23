@@ -16,7 +16,7 @@ func InitRouter() *gin.Engine {
 
 	gin.SetMode(setting.ServerSetting.RunMode)
 
-	r.Static("/static", "./runtime")
+	r.Static("/static", "./public")
 
 	// // 方法原型
 	// // func (group *RouterGroup) StaticFS(relativePath string, fs http.FileSystem) IRoutes {

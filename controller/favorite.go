@@ -33,7 +33,7 @@ func FavoriteAction(c *gin.Context) {
 	}
 
 	// 这里要保证登录的用户的 token 一定可以通过 Redis 查询到
-	if _, exist := usersLoginInfo[token]; !exist {
+	if _, exist := userIsLogin(token); !exist {
 		c.JSON(http.StatusOK, service.Response{StatusCode: 1, StatusMsg: "User doesn't exist"})
 		return
 	}
@@ -99,7 +99,7 @@ func FavoriteList(c *gin.Context) {
 	}
 
 	// 这里要保证登录的用户的 token 一定可以通过 Redis 查询到
-	if _, exist := usersLoginInfo[token]; !exist {
+	if _, exist := userIsLogin(token); !exist {
 		c.JSON(http.StatusOK, service.Response{StatusCode: 1, StatusMsg: "User doesn't exist"})
 		return
 	}

@@ -33,7 +33,7 @@ func Publish(c *gin.Context) {
 	}
 	// 获取文件名分隔符最后面的部分
 	filename := filepath.Base(data.Filename)
-	user := usersLoginInfo[token]
+	user, _ := userIsLogin(token)
 	finalName := fmt.Sprintf("%d_%s", user.Id, filename)
 	saveFile := filepath.Join("./public", finalName)
 	if err = c.SaveUploadedFile(data, saveFile); err != nil {
