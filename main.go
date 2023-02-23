@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/BeardLeon/tiktok/models"
+	go_redis "github.com/BeardLeon/tiktok/pkg/gredis"
 	"github.com/BeardLeon/tiktok/pkg/logging"
 	"github.com/BeardLeon/tiktok/pkg/setting"
 	"github.com/BeardLeon/tiktok/routers/api/v1"
@@ -16,6 +17,7 @@ func main() {
 	setting.Setup()
 	models.Setup()
 	logging.Setup()
+	go_redis.Setup()
 
 	router := v1.InitRouter()
 

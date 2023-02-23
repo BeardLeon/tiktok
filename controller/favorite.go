@@ -58,13 +58,13 @@ func FavoriteAction(c *gin.Context) {
 		return
 	}
 	if actionType == "1" {
-		if err = service.Favorite(int64(user.ID), videoId); err != nil {
+		if err = service.Favorite(int64(user.Id), videoId); err != nil {
 			c.JSON(http.StatusInternalServerError,
 				service.Response{StatusCode: 1, StatusMsg: "service.Favorite error"})
 			return
 		}
 	} else if actionType == "2" {
-		if err = service.CancelFavorite(int64(user.ID), videoId); err != nil {
+		if err = service.CancelFavorite(int64(user.Id), videoId); err != nil {
 			c.JSON(http.StatusInternalServerError,
 				service.Response{StatusCode: 1, StatusMsg: "service.CancelFavorite error"})
 			return
