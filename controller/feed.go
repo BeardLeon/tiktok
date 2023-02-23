@@ -31,7 +31,7 @@ func Feed(c *gin.Context) {
 			})
 			return
 		}
-		lastTime = time.Unix(now, 0)
+		lastTime = time.Unix(now, 0) // 获取时间戳
 	}
 	token, ok := c.GetQuery("token")
 

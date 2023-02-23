@@ -41,14 +41,11 @@ func CreateUser(name, password string) (*User, error) {
 	return &user, nil
 }
 
-func IsExistByNameAndPassword(name, password string) (bool, int64, error) {
+func GetUserByNameAndPassword(name, password string) (*User, error) {
 	var user User
 	result := db.Model(&User{}).Where("`name`=? and `password`=?", name, password).Find(&user)
 	if result.Error != nil {
-		return true, 0, result.Error
+		return &user, result.Error
 	}
-	if user.ID != 0 {
-		return true, int64(user.ID), nil
-	}
-	return false, 0, nil
+	return &user, nil
 }

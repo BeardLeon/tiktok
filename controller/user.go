@@ -7,23 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
-	"sync/atomic"
 )
 
-// usersLoginInfo use map to store user info, and key is username+password for demo
-// user data will be cleared every time the server starts
-// test data: username=zhanglei, password=douyin
-var usersLoginInfo = map[string]service.User{
-	"zhangleidouyin": {
-		Id:            1,
-		Name:          "zhanglei",
-		FollowCount:   10,
-		FollowerCount: 5,
-		IsFollow:      true,
-	},
-}
-
-var userIdSequence = int64(1)
+// var userIdSequence = int64(1)
 
 type UserLoginResponse struct {
 	service.Response
@@ -38,6 +24,7 @@ type UserResponse struct {
 
 const maxLen int = 32
 
+// checkUsernameAndPassword 通过请求参数获取用户名、密码、token 以及参数是否都存在且合法
 func checkUsernameAndPassword(c *gin.Context) (string, string, string, bool) {
 	// TODO: print error
 	username, ok := c.GetQuery("username")
@@ -90,7 +77,7 @@ func Register(c *gin.Context) {
 	}
 
 	// TODO: 内存 map 替换为 Redis
-	if _, exist := usersLoginInfo[token]; exist {
+	if _, exist := userIsLogin(token); exist {
 		c.JSON(http.StatusOK, UserLoginResponse{
 			Response: service.Response{StatusCode: 1, StatusMsg: "User already exist"},
 		})
@@ -106,7 +93,7 @@ func Register(c *gin.Context) {
 	}
 	if exist {
 		c.JSON(http.StatusOK, UserLoginResponse{
-			Response: service.Response{StatusCode: 1, StatusMsg: "User already exist"},
+			Response: service.Response{StatusCode: 1, StatusMsg: "Username already exist"},
 		})
 		return
 	}
@@ -114,18 +101,24 @@ func Register(c *gin.Context) {
 	newUser, err := service.CreateUser(username, password)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, UserLoginResponse{
-			Response: service.Response{StatusCode: 1},
+			Response: service.Response{StatusCode: 1, StatusMsg: "service.CreateUser error"},
 		})
 		return
 	}
 	if newUser == nil {
 		c.JSON(http.StatusOK, UserLoginResponse{
-			Response: service.Response{StatusCode: 1, StatusMsg: "Create user default"},
+			Response: service.Response{StatusCode: 1, StatusMsg: "Failed to create user"},
 		})
 		return
 	}
-	atomic.AddInt64(&userIdSequence, 1)
-	usersLoginInfo[token] = *newUser
+	// atomic.AddInt64(&userIdSequence, 1)
+	err = userLogin(token, newUser)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, UserLoginResponse{
+			Response: service.Response{StatusCode: 1, StatusMsg: "User login error"},
+		})
+		return
+	}
 	c.JSON(http.StatusOK, UserLoginResponse{
 		Response: service.Response{StatusCode: 0},
 		UserId:   newUser.Id,
@@ -140,33 +133,31 @@ func Login(c *gin.Context) {
 		return
 	}
 
-	// TODO: 内存 map 替换为 Redis
-	if user, exist := usersLoginInfo[token]; exist {
+	if _, exist := userIsLogin(token); exist {
 		c.JSON(http.StatusOK, UserLoginResponse{
-			Response: service.Response{StatusCode: 0},
-			UserId:   user.Id,
-			Token:    token,
+			Response: service.Response{StatusCode: 1, StatusMsg: "User already exist"},
 		})
 		return
 	}
 
-	exist, id, err := service.IsExistByNameAndPassword(username, password)
+	// 查询数据库是否存在
+	user, err := service.GetUserByNameAndPassword(username, password)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, UserLoginResponse{
-			Response: service.Response{StatusCode: 1},
+			Response: service.Response{StatusCode: 1, StatusMsg: "GetUserByNameAndPassword error"},
 		})
 		return
 	}
-	if exist {
+	if user.ID == 0 {
 		c.JSON(http.StatusOK, UserLoginResponse{
-			Response: service.Response{StatusCode: 0},
-			UserId:   id,
-			Token:    token,
+			Response: service.Response{StatusCode: 1, StatusMsg: "User doesn't exist"},
 		})
 		return
 	}
 	c.JSON(http.StatusOK, UserLoginResponse{
-		Response: service.Response{StatusCode: 1, StatusMsg: "User doesn't exist"},
+		Response: service.Response{StatusCode: 0},
+		UserId:   int64(user.ID),
+		Token:    token,
 	})
 }
 
@@ -194,8 +185,7 @@ func UserInfo(c *gin.Context) {
 		return
 	}
 
-	// TODO: 内存 map 替换为 Redis
-	if user, exist := usersLoginInfo[token]; exist {
+	if user, exist := userIsLogin(token); exist {
 		if userId != user.Id {
 			c.JSON(http.StatusOK, UserResponse{
 				Response: service.Response{StatusCode: 1, StatusMsg: "user_id does not match token"},
@@ -204,7 +194,7 @@ func UserInfo(c *gin.Context) {
 		}
 		c.JSON(http.StatusOK, UserResponse{
 			Response: service.Response{StatusCode: 0},
-			User:     user,
+			User:     *user,
 		})
 		return
 	}
