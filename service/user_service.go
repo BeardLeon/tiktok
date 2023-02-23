@@ -4,26 +4,34 @@ import (
 	"github.com/BeardLeon/tiktok/models"
 )
 
+// copyUser 将 model 层的 User 查询数据库拼接到 service 层的 User
+func copyUser(modelUser *models.User, user *User) error {
+	user.Id, user.Name = int64(modelUser.ID), modelUser.Name
+	var err error
+	user.FollowCount, err = GetFollowCountById(user.Id)
+	if err != nil {
+		return err
+	}
+	user.FollowerCount, err = GetFollowerCountById(user.Id)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 // GetAuthorById 根据 userId, authorId 返回拼接好的 User 指针，用户的密码 Password（用于校验 token）
 func GetAuthorById(userId, authorId int64) (*User, string, error) {
 	user, err := models.GetUserById(authorId)
 	if err != nil {
-		return &User{}, "", err
+		return nil, "", err
 	}
 	if user == nil {
-		return nil, "", nil
+		return &User{}, "", nil
 	}
-	result := User{
-		Id:   authorId,
-		Name: user.Name,
-	}
-	result.FollowCount, err = GetFollowCountById(authorId)
+	result := &User{}
+	err = copyUser(user, result)
 	if err != nil {
-		return &User{}, "", err
-	}
-	result.FollowerCount, err = GetFollowerCountById(authorId)
-	if err != nil {
-		return &User{}, "", err
+		return nil, "", err
 	}
 	if userId == -1 {
 		result.IsFollow = false
@@ -33,7 +41,7 @@ func GetAuthorById(userId, authorId int64) (*User, string, error) {
 			return &User{}, "", err
 		}
 	}
-	return &result, user.Password, nil
+	return result, user.Password, nil
 }
 
 // IsExistByName 查询用户名为 name 的账号是否存在
@@ -67,6 +75,15 @@ func CreateUser(name, password string) (*User, error) {
 }
 
 // GetUserByNameAndPassword 查询用户名为 name，密码为 password 的用户
-func GetUserByNameAndPassword(name, password string) (*models.User, error) {
-	return models.GetUserByNameAndPassword(name, password)
+func GetUserByNameAndPassword(name, password string) (*User, error) {
+	user, err := models.GetUserByNameAndPassword(name, password)
+	if err != nil {
+		return nil, err
+	}
+	result := &User{}
+	err = copyUser(user, result)
+	if err != nil {
+		return nil, err
+	}
+	return result, nil
 }

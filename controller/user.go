@@ -148,15 +148,16 @@ func Login(c *gin.Context) {
 		})
 		return
 	}
-	if user.ID == 0 {
+	if user.Id == 0 {
 		c.JSON(http.StatusOK, UserLoginResponse{
 			Response: service.Response{StatusCode: 1, StatusMsg: "User doesn't exist"},
 		})
 		return
 	}
+	err = userLogin(token, user)
 	c.JSON(http.StatusOK, UserLoginResponse{
 		Response: service.Response{StatusCode: 0},
-		UserId:   int64(user.ID),
+		UserId:   user.Id,
 		Token:    token,
 	})
 }
