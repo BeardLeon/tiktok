@@ -4,7 +4,67 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c03f5458-8aae-4fb8-a188-e83000d96d5d" name="Changes" comment="" />
+    <list default="true" id="7c04d809-485e-4af9-b213-f3fbd1e03095" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3daf3895-6c40-49be-9ad6-4263aa21623d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3daf3895-6c40-49be-9ad6-4263aa21623d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/article.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/auth.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/comment_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/comment_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/follow_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/follow_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/like_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/like_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/tag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/video_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/video_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/app/form.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/app/request.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/app/response.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/e/cache.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/e/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/code.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/e/msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/msg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/export/excel.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/gredis/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gredis/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/upload/image.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/upload/image.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/util/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/util/md5.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/util/pagination.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/api/auth.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/api/upload.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/api/v1/article.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/api/v1/tag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220920.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220922.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220923.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220924.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20220925.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20221017.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20221022.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230210.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/log20230211.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/video/bear.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/upload/video/bear.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/article_service/article.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/cache_service/article.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/cache_service/tag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/message_service/message.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/message.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/tag_service/tag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/comments.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/follows.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/likes.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/videos.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiktok.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tiktok.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +117,45 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zhangxin/code/go-application/tiktok&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "E:/code/Go/project/leaf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general"
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\code\Go\project\tiktok\runtime\video" />
