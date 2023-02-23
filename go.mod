@@ -77,6 +77,6 @@ require (
 )
 
 replace (
-	github.com/BeardLeon/tiktok/middleware/jwt => E:\code\Go\project\tiktok\middleware\jwt
-	github.com/BeardLeon/tiktok/pkg => E:\code\Go\project\tiktok\pkg
+	github.com/BeardLeon/tiktok/middleware/jwt => C:\1\tiktok\middleware\jwt
+	github.com/BeardLeon/tiktok/pkg => C:\1\tiktok\pkg
 )

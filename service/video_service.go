@@ -40,6 +40,7 @@ func copyVideos(videos []models.Video, results []Video) error {
 
 // GetVideosByLastTime 根据传入的时间获取视频
 func GetVideosByLastTime(lastTime time.Time) ([]Video, error) {
+	// 看看
 	videos, err := models.GetVideosByLastTime(lastTime)
 	if err != nil {
 		return nil, err

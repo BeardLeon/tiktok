@@ -33,6 +33,7 @@ func GetVideosByLastTime(lastTime time.Time) ([]Video, error) {
 func GetVideosByAuthorId(authorId int64) ([]Video, error) {
 	// videos 集合
 	var videos []Video
+
 	result := db.Model(&Video{}).Where("author_id=?", authorId).Find(&videos)
 	if result.Error != nil {
 		return nil, result.Error

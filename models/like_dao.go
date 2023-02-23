@@ -54,10 +54,17 @@ func CancelFavorite(userId, videoId int64) error {
 
 func GetFavoriteVideosByUserId(userId int64) ([]Video, error) {
 	var likes []Like
-	db.Model(&Like{}).Where("user_id=? and cancel=0", userId).Find(&likes)
+	// 找到 userid 和 cance 全部
+	err := db.Model(&Like{}).Where("user_id=? and cancel=0", userId).Find(&likes)
+	// 加了一个错误判断 是不是likes有问题
+	if err != nil {
+		return nil, err.Error
+	}
 	videos := make([]Video, len(likes))
 	for i, like := range likes {
+		// 视频 赋给 videos 一个个
 		result := db.Model(&Video{}).Where("id=?", like.VideoId).First(&videos[i])
+
 		if result.Error != nil {
 			return nil, result.Error
 		}

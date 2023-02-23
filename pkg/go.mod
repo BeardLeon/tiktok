@@ -14,4 +14,4 @@ require (
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 )
 
-replace github.com/BeardLeon/tiktok/pkg => E:\code\Go\project\tiktok\pkg
+replace github.com/BeardLeon/tiktok/pkg => C:\1\tiktok\pkg
