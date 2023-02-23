@@ -2,7 +2,7 @@ package controller
 
 import (
 	"encoding/json"
-	go_redis "github.com/BeardLeon/tiktok/pkg/go-redis"
+	go_redis "github.com/BeardLeon/tiktok/pkg/gredis"
 	"github.com/BeardLeon/tiktok/service"
 	"github.com/redis/go-redis/v9"
 )

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/BeardLeon/tiktok/models"
-	go_redis "github.com/BeardLeon/tiktok/pkg/go-redis"
+	go_redis "github.com/BeardLeon/tiktok/pkg/gredis"
 	"github.com/BeardLeon/tiktok/pkg/logging"
 	"github.com/BeardLeon/tiktok/pkg/setting"
 	"github.com/BeardLeon/tiktok/routers/api/v1"
